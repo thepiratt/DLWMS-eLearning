@@ -1,0 +1,27 @@
+<p>proba1 works!</p>
+
+
+<p>Hello {{ime}}</p>
+
+<p *ngIf="jelVidljivo()">
+  1- Hello <input value="{{ime}}">
+</p>
+
+<p>
+  2- Hello <input [ngModel]="ime" (ngModelChange)="ime=$event">
+</p>
+
+<button class="btn btn-primary"  (click)="testirajString()">Testiraj string</button>
+<button class="btn btn-warning" (click)="pokreniTimer()">Pokreni timer</button>
+
+<div>
+  <ol>
+    <li *ngFor="let s of niz">{{s}}</li>
+  </ol>
+</div>
+
+
+<p [ngStyle]="mojStyle()">
+  4- Brojac = {{brojac}}
+</p>
+

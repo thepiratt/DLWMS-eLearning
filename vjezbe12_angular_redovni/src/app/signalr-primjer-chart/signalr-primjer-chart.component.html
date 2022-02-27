@@ -1,0 +1,20 @@
+
+<p>singalr-chart-primjer works!</p>
+
+<div *ngIf="signalRService.nizPodataka">
+  <ol>
+    <li *ngFor="let x of signalRService.nizPodataka">{{x.data}} | {{x.label}}</li>
+  </ol>
+
+  <canvas baseChart
+          [datasets]="signalRService.nizPodataka"
+          [labels]="chartLabels"
+          [options]="chartOptions"
+          [legend]="chartLegend"
+          [chartType]="chartType"
+          [colors]="colors"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+
+
+<button (click)="pozoviMetodaHub1()">MetodaHub1</button>

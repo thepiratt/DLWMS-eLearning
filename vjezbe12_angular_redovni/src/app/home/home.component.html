@@ -1,0 +1,7 @@
+<p>home works!</p>
+<app-home-student  *ngIf="loginInfo().isPermisijaStudent"></app-home-student>
+<app-home-administrator   *ngIf="loginInfo().isPermsijaAdmin"></app-home-administrator>
+<app-home-nastavnik   *ngIf="loginInfo().isPermisijaNastavnik"></app-home-nastavnik>
+<app-home-prodekan   *ngIf="loginInfo().isPermisijaProdekan"></app-home-prodekan>
+<app-home-dekan  *ngIf="loginInfo().isPermisijaDekan"></app-home-dekan>
+<app-home-studentska-sluzba  *ngIf="loginInfo().isPermisijaStudentskaSluzba"></app-home-studentska-sluzba>
